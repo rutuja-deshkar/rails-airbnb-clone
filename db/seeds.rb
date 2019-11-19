@@ -2,7 +2,6 @@ User.destroy_all
 Space.destroy_all
 
 
-
 users_attributes = [
         { email: Faker::Internet.email,
           password: '123456',
