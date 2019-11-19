@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="text-center mt-3">Explore our spaces</h1>
+  <div class="row">
+    <% if @spaces.any? %>
+      <% @spaces.each do |space| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card mx-3 my-3" >
+            <div class="card-product">
+              <img src="http://thespaces.com/wp-content/uploads/2017/02/electroposive-NYC-coworking-space.jpg" />
+              <div class="card-product-infos">
+                <h2><%= link_to space.name, space_path(space) %></h2>
+                <p><%= space.address %></p>
+                <p><%= space.price_per_person%>€</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p>Sorry, we couldn't find any space that meets your criteria.</p>
+    <% end %>
+  </div>
+</div>
