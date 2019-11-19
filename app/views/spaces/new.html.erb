@@ -1,0 +1,22 @@
+<div class="container padded">
+  <h1 class="text-left">Add your space</h1>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <div class="form-create">
+        <%= simple_form_for @space do |f| %>
+          <%= f.input :name %>
+          <%= f.input :description %>
+          <%= f.input :address %>
+          <%= f.input :max_capacity %>
+          <%= f.input :price_per_person %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.submit "Submit", class: "btn btn-primary" %>
+        <% end %>
+        <div class="mt-3">
+          <%= link_to "Browse all spaces", spaces_path, class: "btn btn-warning btn-sm" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
