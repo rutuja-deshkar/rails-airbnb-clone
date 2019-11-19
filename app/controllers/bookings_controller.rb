@@ -2,7 +2,9 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
   def index
-    @bookings = Booking.all
+    @space = Space.find(params[:space_id])
+    @bookings = Booking.where(space_id: params[:space_id])
+    # @bookings = Booking.where(user_id: current_user)
   end
 
   def show
