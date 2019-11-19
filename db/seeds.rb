@@ -1,5 +1,6 @@
-User.destroy_all
+Booking.destroy_all
 Space.destroy_all
+User.destroy_all
 
 
 users_attributes = [
@@ -39,7 +40,7 @@ spaces = [
              description: "BlankSpace offers 24/7 secure access, fibre internet and kitchen facilities with tea and coffee provided, as well as a projector, table tennis table, meeting area and studio backdrops for film and video. The studio has a modern loft feel with high ceilings and natural light. BlankSpace is also a pet-friendly space.",
              max_capacity: (1..20).to_a.sample*10,
              price_per_person: (30..90).to_a.sample*10,
-             user_id: (1..users_attributes).to_a.sample,
+             user_id: (1..users_attributes.size).to_a.sample,
              address: ['Berlin', 'Paris', 'London', 'Budapest'].sample
            },
            { name: "The Henley Club",
@@ -102,19 +103,19 @@ bookings_attributes = [
               start_date: Time.parse("01-01-2017"),
               end_date: Time.parse("11-01-2017"),
               space_id: (1..10).to_a.sample,
-              user_id: (1..5).to_a.sample
+              user_id: (1..users_attributes.size).to_a.sample
            },
            {
               start_date: Time.parse("01-02-2017"),
               end_date: Time.parse("11-02-2017"),
               space_id: (1..10).to_a.sample,
-              user_id: (1..5).to_a.sample
+              user_id: (1..users_attributes.size).to_a.sample
            },
            {
               start_date: Time.parse("01-03-2017"),
               end_date: Time.parse("11-03-2017"),
               space_id: (1..10).to_a.sample,
-              user_id: (1..5).to_a.sample
+              user_id: (1..users_attributes.size).to_a.sample
            }]
 
 bookings_attributes.each {|b| Booking.create(b) }
