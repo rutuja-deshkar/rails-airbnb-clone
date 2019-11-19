@@ -20,6 +20,11 @@ class BookingsController < ApplicationController
   def update
   end
 
+  def destroy
+    @booking.destroy
+    redirect_to root_path, notice: 'Booking was successfully destroyed.'
+  end
+
   private
 
   def set_booking

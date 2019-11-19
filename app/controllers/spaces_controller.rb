@@ -28,6 +28,11 @@ class SpacesController < ApplicationController
   def update
   end
 
+  def destroy
+    @space.destroy
+    redirect_to root_path, notice: 'Space was successfully destroyed.'
+  end
+
   private
 
   def set_space
