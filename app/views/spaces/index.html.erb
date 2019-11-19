@@ -7,16 +7,19 @@
           <div class="card mx-3 my-3" >
             <div class="card-product">
               <%if space.photo? %>
-             <!--  <%#= raise %> -->
                 <%= cl_image_tag space.photo, height: 700, width: 500, crop: :fill %>
               <% else %>
                 <%= image_tag ("http://thespaces.com/wp-content/uploads/2017/02/electroposive-NYC-coworking-space.jpg") %>
-                <!-- <img src="http://thespaces.com/wp-content/uploads/2017/02/electroposive-NYC-coworking-space.jpg" /> -->
               <% end %>
               <div class="card-product-infos">
                 <h2><%= link_to space.name, space_path(space) %></h2>
                 <p><%= space.address %></p>
                 <p><%= space.price_per_person%>€</p>
+                <% if space.user == current_user %>
+                  <%= link_to space_path(space), method: :delete, data: { confirm: "Are you sure?" } do %>
+                    <i class="fa fa-trash"></i>
+                  <% end %>
+                <% end %>
               </div>
             </div>
           </div>
