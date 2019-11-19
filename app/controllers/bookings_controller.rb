@@ -18,6 +18,8 @@ class BookingsController < ApplicationController
   end
 
   def update
+    @booking.update(booking_params)
+    redirect_to bookings_path, notice: 'Booking was successfully updated.'
   end
 
   def destroy

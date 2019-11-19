@@ -26,11 +26,16 @@ class SpacesController < ApplicationController
   end
 
   def update
+    if @space.update(space_params)
+      redirect_to @space, notice: 'Space was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   def destroy
     @space.destroy
-    redirect_to root_path, notice: 'Space was successfully destroyed.'
+    redirect_to spaces_path, notice: 'Space was successfully destroyed.'
   end
 
   private
