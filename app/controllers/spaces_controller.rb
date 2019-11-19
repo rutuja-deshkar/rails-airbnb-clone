@@ -34,6 +34,7 @@ class SpacesController < ApplicationController
   end
 
   def destroy
+    puts "TESTTTT"
     @space.destroy
     redirect_to spaces_path, notice: 'Space was successfully destroyed.'
   end
