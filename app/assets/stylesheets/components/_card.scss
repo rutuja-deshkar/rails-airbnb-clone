@@ -37,6 +37,19 @@
   justify-content: center;
 }
 
+.card-show {
+  width: 65%;
+  margin: 55px auto;
+}
 
+.card-show img {
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 45px;
+}
 
+.card-show h2 {
+  margin-bottom: 20px;
+}
 
