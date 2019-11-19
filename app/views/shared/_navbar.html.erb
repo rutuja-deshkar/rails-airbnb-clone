@@ -15,11 +15,11 @@
       <li class="nav-item">
           <%= link_to "Home", root_path , class: "nav-link" %>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <%= link_to "Rent a space", new_space_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "My bookings", "#", class: "nav-link" %>
+          <%= link_to "My bookings", profile_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "monster1.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

@@ -1,0 +1,53 @@
+<div class="container">
+  <% if @bookings.any? %>
+    <h1 class="text-center mt-3">My bookings</h1>
+    <div class="row">
+      <% @bookings.each do |booking| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card mx-3 my-3" >
+            <div class="card-product">
+              <div class="card-product-infos">
+                <p>User:<%= "#{booking.user.first_name.capitalize} #{booking.user.last_name.capitalize}" %></p>
+                <p>From: <%= booking.start_date %></p>
+                <p>To: <%= booking.end_date %></p>
+                <p>Space: <%= booking.space.name %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <p>Sorry, we couldn't find any space that meets your criteria.</p>
+  <% end %>
+</div>
+
+
+<div class="container">
+  <% if @spaces.any? %>
+    <h1 class="text-center mt-3">My listings</h1>
+    <div class="row">
+      <% @spaces.each do |space| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card mx-3 my-3" >
+            <div class="card-product">
+              <%if space.photo? %>
+                <%= cl_image_tag space.photo, height: 700, width: 500, crop: :fill %>
+              <% else %>
+                <%= image_tag ("http://thespaces.com/wp-content/uploads/2017/02/electroposive-NYC-coworking-space.jpg") %>
+              <% end %>
+              <div class="card-product-infos">
+                <p><strong><%= space.name %></strong></p>
+                <p><%= space.address %></p>
+                <p><%= space.price_per_person %></p>
+                <p>Accomodates <%= space.max_capacity %> people</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <p>Sorry, we couldn't find any space that meets your criteria.</p>
+  <% end %>
+</div>
