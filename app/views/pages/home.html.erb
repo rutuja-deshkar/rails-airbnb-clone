@@ -8,35 +8,25 @@
 </div>
 
 
-<div class="container">
+<div class="form_container">
+  <h3 class="text-left">Find your space</h3>
   <div class="row">
-  <div class="form-group">
-  <h2>Find your space</h2>
-    <div class="form-inputs">
-    <%= form_with model: @spaces do |form| %>
-     <%= form.text_field "Location" %>
-     <%= form.text_field "Number of guests" %>
-     <%= form.date_field :start_date %>
-     <%= form.date_field :end_date %>
-     <%= form.submit "Search" %>
-  <% end %>
-</div>
-</div>
-</div>
+      <%= form_with model: @spaces do |form| %>
+      <div class="form-input mb-1">
+       <%= form.text_field :address, placeholder: "Type in location", class: "form-control" %>
+     </div>
+     <div class="form-input mb-1">
+       <%= form.text_field :max_capacity, placeholder: "How many guests", class: "form-control" %>
+     </div>
+     <div class="form-input mb-1">
+       <%= form.date_field :start_date, class: "form-control" %>
+     </div>
+     <div class="form-input mb-1">
+       <%= form.date_field :end_date, class: "form-control" %>
+     </div>
 
-
-
-
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
-  </div>
-</div>
+      <%= link_to "Search", spaces_path, class: "btn btn-success btn-sm" %>
+      <% end %>
+      </div>
+    </div>
 
