@@ -17,10 +17,10 @@
                 <p><%= space.address %></p>
                 <p><%= space.price_per_person%>€</p>
                 <% if space.user == current_user %>
-                  <%#= link_to space_path(space), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <%#= link_to space_path(space), method: :delete, data: { confirm: "Are you sure?" }, class: "z-index:2" do %>
                     <!-- <i class="fa fa-trash"></i> -->
                   <%# end %>
-                  <%= link_to "Delete", space_path(space), method: :delete, data: { confirm: "Are you sure?" } %>
+                  <%#= link_to "Delete", space_path(space), method: :delete, data: { confirm: "Are you sure?" } %>
                 <% end %>
               </div>
             </div>
