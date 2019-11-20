@@ -1,0 +1,7 @@
+<div class="form-login text-dark mt-3 mb-3">
+        <%= simple_form_for [space, booking] do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.submit "Submit", class: "btn-submit" %>
+        <% end %>
+</div>
