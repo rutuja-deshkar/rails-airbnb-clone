@@ -57,7 +57,7 @@ space1 = Space.new(
             max_capacity: (1..20).to_a.sample*10,
             price_per_person: (30..90).to_a.sample*10,
             # user_id: (1..users_attributes.size).to_a.sample,
-            user_id: User.all.sample,
+            user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
 space1.remote_photo_url = "https://remote.co/wp-content/uploads/2016/06/coworking_space.png"
 space1.save!
@@ -68,7 +68,7 @@ space2 = Space.new(
             max_capacity: (1..20).to_a.sample*10,
             price_per_person: (30..90).to_a.sample*10,
             # user_id: User.second.id
-            user_id: User.all.sample,
+            user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
 space2.remote_photo_url = "http://thespaces.com/wp-content/uploads/2015/04/Gallery_Small-1.jpg"
 space2.save!
@@ -79,7 +79,7 @@ space3 = Space.new(
             max_capacity: (1..20).to_a.sample*10,
             price_per_person: (30..90).to_a.sample*10,
             # user_id: (1..users_attributes.size).to_a.sample,
-            user_id: User.all.sample,
+            user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
 space3.remote_photo_url = "http://www.societyworkspace.com/wp-content/uploads/2014/07/Society-Co-Working-Phoenix-Downtown-1-2-1024x799.jpg"
 space3.save!
@@ -90,7 +90,7 @@ space4 = Space.new(
             max_capacity: (1..20).to_a.sample*10,
             price_per_person: (30..90).to_a.sample*10,
             # user_id: (1..users_attributes.size).to_a.sample,
-            user_id: User.all.sample,
+            user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
 space4.remote_photo_url = "https://www.sohohouse.com/system/files/032015/54f83b26f7c88bc2100001c1/xlarge/30_10_14_barber_and_parlour_9654final.jpg?1427294352"
 space4.save!
@@ -101,7 +101,7 @@ space5 = Space.new(
             max_capacity: (1..20).to_a.sample*10,
             price_per_person: (30..90).to_a.sample*10,
             # user_id: (1..users_attributes.size).to_a.sample,
-            user_id: User.all.sample,
+            user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
 space5.remote_photo_url = "https://unsplash.com/photos/dZxQn4VEv2M"
 space5.save!
@@ -112,7 +112,7 @@ space6 = Space.new(
             max_capacity: (1..20).to_a.sample*10,
             price_per_person: (30..90).to_a.sample*10,
             # user_id: (1..users_attributes.size).to_a.sample,
-            user_id: User.all.sample,
+            user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London'].sample)
 space6.remote_photo_url = "https://www.thebulletin.be/sites/default/files/styles/big_article/public/coworking.jpg"
 space6.save!
@@ -123,7 +123,7 @@ space7 = Space.new(
             max_capacity: (1..20).to_a.sample*10,
             price_per_person: (30..90).to_a.sample*10,
             # user_id: (1..users_attributes.size).to_a.sample,
-            user_id: User.all.sample,
+            user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
 space7.remote_photo_url = "https://d2lgtvdb6hylu5.cloudfront.net/439bc45e66f52eb860b9a12bf7768cf9716af9d0/12379.560x398x0.jpg"
 space7.save!
@@ -134,7 +134,7 @@ space8 = Space.new(
             max_capacity: (1..20).to_a.sample*10,
             price_per_person: (30..90).to_a.sample*10,
             # user_id: (1..users_attributes.size).to_a.sample,
-            user_id: User.all.sample,
+            user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
 space8.remote_photo_url = "https://images.financialexpress.com/2019/03/co-working-space1a.jpg"
 space8.save!
@@ -145,7 +145,7 @@ space9 = Space.new(
             max_capacity: (1..20).to_a.sample*10,
             price_per_person: (30..90).to_a.sample*10,
             # user_id: (1..users_attributes.size).to_a.sample,
-            user_id: User.all.sample,
+            user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
 space9.remote_photo_url = "https://mitvergnuegen.com/wp-content/uploads/2018/10/02_m-coworking-microsoft_the-digital-eatery-680x383.jpg"
 space9.save!
@@ -156,7 +156,7 @@ space10 = Space.new(
             max_capacity: (1..20).to_a.sample*10,
             price_per_person: (30..90).to_a.sample*10,
             # user_id: (1..users_attributes.size).to_a.sample,
-            user_id: User.all.sample,
+            user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
 space10.remote_photo_url = "https://img.theculturetrip.com/x/smart/wp-content/uploads/2017/09/img_6499-min.jpg"
 space10.save!
@@ -168,74 +168,74 @@ bookings_attributes = [
               start_date: Time.parse("01-11-2019"),
               end_date: Time.parse("30-11-2019"),
               # space_id: (1..spaces.size).to_a.sample,
-              space_id: Space.all.sample,
+              space_id: Space.all.sample.id,
               # user_id: (1..users_attributes.size).to_a.sample
-              user_id: User.all.sample,
+              user_id: User.all.sample.id,
               # user_id: (1..4).to_a.sample
            },
            {
               start_date: Time.parse("01-12-2019"),
               end_date: Time.parse("31-12-2019"),
               # space_id: (1..spaces.size).to_a.sample,
-              space_id: Space.all.sample,
+              space_id: Space.all.sample.id,
               # user_id: (1..users_attributes.size).to_a.sample
-              user_id: User.all.sample,
+              user_id: User.all.sample.id,
               # user_id: (1..4).to_a.sample
            },
            {
               start_date: Time.parse("15-11-2019"),
               end_date: Time.parse("31-12-2019"),
               # space_id: (1..spaces.size).to_a.sample,
-              space_id: Space.all.sample,
+              space_id: Space.all.sample.id,
               # user_id: (1..users_attributes.size).to_a.sample
-              user_id: User.all.sample,
+              user_id: User.all.sample.id,
               # user_id: (1..4).to_a.sample
            },
            {
               start_date: Time.parse("01-11-2019"),
               end_date: Time.parse("15-11-2019"),
               # space_id: (1..spaces.size).to_a.sample,
-              space_id: Space.all.sample,
+              space_id: Space.all.sample.id,
               # user_id: (1..users_attributes.size).to_a.sample
-              user_id: User.all.sample,
+              user_id: User.all.sample.id,
               # user_id: (1..4).to_a.sample
            },
            {
               start_date: Time.parse("01-10-2019"),
               end_date: Time.parse("30-11-2019"),
               # space_id: (1..spaces.size).to_a.sample,
-              space_id: Space.all.sample,
+              space_id: Space.all.sample.id,
               # user_id: (1..users_attributes.size).to_a.sample
-              user_id: User.all.sample,
+              user_id: User.all.sample.id,
               # user_id: (1..4).to_a.sample
            },
            {
               start_date: Time.parse("10-10-2019"),
               end_date: Time.parse("30-11-2019"),
               # space_id: (1..spaces.size).to_a.sample,
-              space_id: Space.all.sample,
+              space_id: Space.all.sample.id,
               # user_id: (1..users_attributes.size).to_a.sample
-              user_id: User.all.sample,
+              user_id: User.all.sample.id,
               # user_id: (1..4).to_a.sample
            },
            {
               start_date: Time.parse("20-10-2019"),
               end_date: Time.parse("20-11-2019"),
               # space_id: (1..spaces.size).to_a.sample,
-              # space_id: Space.all.sample,
-              space_id: Space.all.sample,
+              # space_id: Space.all.sample.id,
+              space_id: Space.all.sample.id,
               # user_id: (1..users_attributes.size).to_a.sample
-              user_id: User.all.sample,
+              user_id: User.all.sample.id,
               # user_id: (1..4).to_a.sample
            },
            {
               start_date: Time.parse("12-11-2019"),
               end_date: Time.parse("25-12-2019"),
               # space_id: (1..spaces.size).to_a.sample,
-              # space_id: Space.all.sample,
-              space_id: Space.all.sample,
+              # space_id: Space.all.sample.id,
+              space_id: Space.all.sample.id,
               # user_id: (1..users_attributes.size).to_a.sample
-              user_id: User.all.sample,
+              user_id: User.all.sample.id,
               # user_id: (1..4).to_a.sample
            },
          ]
