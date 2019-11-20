@@ -10,9 +10,19 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @booking = Booking.new
   end
 
   def create
+    @booking = Booking.new(booking_params)
+    @space = Space.find(params[:space_id])
+    @booking.user = current_user
+    @booking.space = @space
+    if @booking.save!
+      redirect_to profile_path, notice: 'Booking successful!'
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -35,6 +45,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:space_id, :start_date, :end_date)
   end
 end

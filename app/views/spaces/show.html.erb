@@ -1,6 +1,14 @@
 <div class="card-show">
-  <img width="100%" src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80" alt="Office">
+  <%= link_to 'Back to all listings', spaces_path, class: "back-link" %>
+  <%if @space.photo? %>
+    <%= cl_image_tag @space.photo, height: 700, width: '100%', crop: :fill %>
+  <% else %>
+    <%= image_tag ("http://thespaces.com/wp-content/uploads/2017/02/electroposive-NYC-coworking-space.jpg") %>
+  <% end %>
   <h2 class="name"><%= @space.name %></h2>
   <h3 class="location"><%= @space.address %></h3>
   <p class="name"><%= @space.description %></p>
+  <div class="col-sm-12 col-md-6">
+    <%= render "bookings/new", space: @space, booking: @booking %>
+  </div>
 </div>

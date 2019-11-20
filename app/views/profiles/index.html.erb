@@ -14,7 +14,7 @@
               <div class="card-product-infos">
                 <p>Space: <strong><%= booking.space.name %></strong></p>
                 <p>Location: <%= booking.space.address %></p>
-                <p>User:<%= "#{booking.user.first_name.capitalize} #{booking.user.last_name.capitalize}" %></p>
+
                 <p>From: <%= booking.start_date %></p>
                 <p>To: <%= booking.end_date %></p>
                 <p>Booked for <%= "#{(1..20).to_a.sample*10}" %> people </p>
