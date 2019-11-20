@@ -1,6 +1,6 @@
 <div class="container">
   <% if @bookings.any? %>
-    <h3 class="text-center mt-3">My bookings</h3>
+    <h3 class="text-left mt-3 mb-2 ml-4">My bookings</h3>
     <div>
       <% @bookings.each do |booking| %>
         <div class="col-xs-12 col-sm-4">
@@ -12,12 +12,12 @@
                 <%= image_tag ("http://thespaces.com/wp-content/uploads/2017/02/electroposive-NYC-coworking-space.jpg") %>
               <% end %>
               <div class="card-product-infos">
-                <p>Space: <strong><%= booking.space.name %></strong></p>
-                <p>Location: <%= booking.space.address %></p>
-                <p>User:<%= "#{booking.user.first_name.capitalize} #{booking.user.last_name.capitalize}" %></p>
+                <p><strong><%= booking.space.name %></strong></p>
+                <p><%= booking.space.address %></p>
+                <!-- <p>User: <%#= "#{booking.user.first_name.capitalize} #{booking.user.last_name.capitalize}" %></p> -->
                 <p>From: <%= booking.start_date %></p>
                 <p>To: <%= booking.end_date %></p>
-                <p>Booked for <%= "#{(1..20).to_a.sample*10}" %> people </p>
+                <p>Booked for <strong><%= "#{(1..20).to_a.sample*10}" %></strong> people </p>
                 <%#= link_to "Update", edit_booking_path(space), class: "btn btn-primary mt-3" %>
                 <%#= link_to "Delete", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary mt-3" %>
               </div>
@@ -26,15 +26,15 @@
         </div>
       <% end %>
     </div>
-  <% else %>
-    <p>Sorry, we couldn't find any space that meets your criteria.</p>
+  <%# else %>
+    <!-- <p>Sorry, we couldn't find any space that meets your criteria.</p> -->
   <% end %>
 </div>
 
 
 <div class="container">
   <% if @spaces.any? %>
-    <h3 class="text-center mt-3">My listings</h3>
+    <h3 class="text-left mt-5 mb-2 ml-4">My listings</h3>
     <div>
       <% @spaces.each do |space| %>
         <div class="col-xs-12 col-sm-4">
@@ -50,15 +50,15 @@
                 <p><%= space.address %></p>
                 <p><%= space.price_per_person %>€</p>
                 <p>Accomodates <%= space.max_capacity %> people</p>
-                <%= link_to "Update", edit_space_path(space), class: "btn btn-primary mt-3" %>
-                <%= link_to "Delete", space_path(space), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary mt-3" %>
+                <%= link_to "Update", edit_space_path(space), class: "btn btn-success mt-3" %>
+                <%= link_to "Delete", space_path(space), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-success mt-3" %>
               </div>
             </div>
           </div>
         </div>
       <% end %>
     </div>
-  <% else %>
-    <p>Sorry, we couldn't find any space that meets your criteria.</p>
+  <%# else %>
+    <!-- <p>You don't have any listings</p> -->
   <% end %>
 </div>

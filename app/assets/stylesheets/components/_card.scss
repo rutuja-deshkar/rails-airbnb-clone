@@ -3,7 +3,7 @@
   height: 200px;
   width: 40vw;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 10px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   color: black;
@@ -12,22 +12,24 @@
 .card-product img {
   height: 100%;
   // width: 120px;
-  width: 200px;
+  width: 300px;
   object-fit: cover;
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
+  font-family: "Tomorrow", sans-serif;
 }
 
 .card-product p {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  font-family: "Tomorrow", sans-serif;
 }
 
 .card-product .card-product-infos {

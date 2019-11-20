@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="text-center mt-3">Explore our spaces</h1>
+  <h3 class="text-left mt-3 ml-4">Explore our spaces</h3>
   <div>
     <% if @spaces.any? %>
       <% @spaces.each do |space| %>
@@ -16,12 +16,6 @@
                 <h2><%= space.name %></h2>
                 <p><%= space.address %></p>
                 <p><%= space.price_per_person%>€</p>
-                <% if space.user == current_user %>
-                  <%#= link_to space_path(space), method: :delete, data: { confirm: "Are you sure?" }, class: "z-index:2" do %>
-                    <!-- <i class="fa fa-trash"></i> -->
-                  <%# end %>
-                  <%#= link_to "Delete", space_path(space), method: :delete, data: { confirm: "Are you sure?" } %>
-                <% end %>
               </div>
             </div>
           </div>
@@ -31,4 +25,5 @@
       <p>Sorry, we couldn't find any space that meets your criteria.</p>
     <% end %>
   </div>
+  <!-- <img id="map" src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png'> -->
 </div>
