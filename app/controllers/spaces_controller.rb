@@ -7,9 +7,9 @@ class SpacesController < ApplicationController
     @spaces = Space.geocoded
     if params[:spaces][:address].present?
       @spaces = Space.near(params[:spaces][:address],20)
-    else
-      @spaces = Space.all
     end
+
+    # @spaces = @spaces.where(guests)
 
     @markers = @spaces.map do |space|
       {
@@ -63,5 +63,10 @@ class SpacesController < ApplicationController
 
   def space_params
     params.require(:space).permit(:name, :description, :address, :max_capacity, :price_per_person, :photo)
+  end
+
+  def set_search_query
+    unless params[:spaces].nil?
+    end
   end
 end
