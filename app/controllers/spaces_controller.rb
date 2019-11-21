@@ -2,8 +2,13 @@ class SpacesController < ApplicationController
   before_action :set_space, only: [:show, :edit, :update, :destroy]
 
   def index
-    @spaces = Space.all
+    if params[:spaces][:address].present?
+      @spaces = Space.where("address ILIKE ?", "%#{params[:spaces][:address]}%")
+    else
+      @spaces = Space.all
+    end
   end
+
 
   def show
     @booking = Booking.new
