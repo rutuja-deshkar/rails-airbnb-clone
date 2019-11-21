@@ -1,13 +1,11 @@
 map {
+   display: flex;
    height: 100vh;
    width: 50%;
-   position: sticky;
-   top: 0;
  }
 
 .mapboxgl-popup {
   max-width: 200px;
-  padding-left: 20px;
 }
 
 .mapboxgl-popup-content {
