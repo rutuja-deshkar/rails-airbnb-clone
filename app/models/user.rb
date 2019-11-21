@@ -5,5 +5,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :spaces
   has_many :bookngs
-  validates :first_name, :last_name, presence: true, allow_blank: false
 end
