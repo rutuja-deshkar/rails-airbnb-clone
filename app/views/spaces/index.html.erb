@@ -4,11 +4,11 @@
     <% if @spaces.any? %>
       <% @spaces.each do |space| %>
         <div class="col-xs-12 col-sm-4">
-          <div class="card mx-3 my-3" >
+          <div class="mx-3 my-3" >
             <div class="card-product relative">
               <%= link_to "", space_path(space), class:"link" %>
               <%if space.photo? %>
-                <%= cl_image_tag space.photo, height: 700, width: 500, crop: :fill %>
+                <%= cl_image_tag space.photo %>
               <% else %>
                 <%= image_tag ("http://thespaces.com/wp-content/uploads/2017/02/electroposive-NYC-coworking-space.jpg") %>
               <% end %>

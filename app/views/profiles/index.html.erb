@@ -4,7 +4,7 @@
     <div>
       <% @bookings.each do |booking| %>
         <div class="col-xs-12 col-sm-4">
-          <div class="card mx-3 my-3" >
+          <div class="mx-3 my-3" >
             <div class="card-product">
               <%if booking.space.photo? %>
                 <%= cl_image_tag booking.space.photo, height: 700, width: 500, crop: :fill %>
@@ -12,7 +12,7 @@
                 <%= image_tag ("http://thespaces.com/wp-content/uploads/2017/02/electroposive-NYC-coworking-space.jpg") %>
               <% end %>
               <div class="card-product-infos">
-                <p><strong><%= booking.space.name %></strong></p>
+                <p id="profile-card-name"><%= booking.space.name %></strong></p>
                 <p><%= booking.space.address %></p>
                 <!-- <p>User: <%#= "#{booking.user.first_name.capitalize} #{booking.user.last_name.capitalize}" %></p> -->
                 <p>From: <%= booking.start_date %></p>
@@ -38,7 +38,7 @@
     <div>
       <% @spaces.each do |space| %>
         <div class="col-xs-12 col-sm-4">
-          <div class="card mx-3 my-3" >
+          <div class="mx-3 my-3" >
             <div class="card-product">
               <%if space.photo? %>
                 <%= cl_image_tag space.photo, height: 700, width: 500, crop: :fill %>
@@ -52,6 +52,7 @@
                 <p>Accomodates <%= space.max_capacity %> people</p>
                 <%= link_to "Update", edit_space_path(space), class: "btn btn-success mt-3" %>
                 <%= link_to "Delete", space_path(space), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-success mt-3" %>
+                <%= link_to "View all bookings", space_bookings_path(space), class: "btn btn-success mt-3" %>
               </div>
             </div>
           </div>

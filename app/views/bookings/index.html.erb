@@ -1,17 +1,26 @@
 <div class="container">
-  <h1>Booking History for <strong><%= @space.name %></strong></h1>
+  <div class="d-flex justify-content-between mt-3 page-heading">
+    <h3 class = "ml-4">Booking History for <strong><%= @space.name %></strong></h3>
+    <%= link_to 'Back to my listings', profile_path, class: "btn btn-success" %>
+  </div>
   <% if @bookings.any? %>
     <% @bookings.each do |booking| %>
-      <div class="index">
-        <p>User:<%= "#{@space.user.first_name.capitalize}  #{@space.user.last_name.capitalize}" %></p>
-        <h4>From: <strong><%= booking.start_date %></strong> To: <strong><%= booking.end_date %></strong></h4>
-        </br>
-        <div class="btn btn-default margin-bot">
-          <%= link_to 'Back to space', space_path(@space), class: "btn btn-primary" %>
+      <div class="col-xs-12 col-sm-4">
+          <div class="mx-3 my-3" >
+            <div class="card-product">
+              <div class="card-product-infos">
+                <p>User: <%= "#{@space.user.first_name.capitalize}  #{@space.user.last_name.capitalize}" %></p>
+                <p>From: <strong><%= booking.start_date %></strong> To: <strong><%= booking.end_date %></strong></p>
+                <p>Booked for <strong><%= "#{(1..20).to_a.sample*10}" %></strong>people</p>
+
+                </br>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     <% end %>
   <% else %>
-    <p>Sorry, there's no booking for this space.</p>
+    <p class="ml-4">There are no booking for this space.</p>
   <% end %>
 </div>
