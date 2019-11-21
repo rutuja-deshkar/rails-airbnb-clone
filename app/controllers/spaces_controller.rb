@@ -6,10 +6,10 @@ class SpacesController < ApplicationController
   def index
     @spaces = Space.geocoded
     if params[:spaces][:address].present?
-      @spaces = Space.near(params[:spaces][:address],20)
+      @spaces = Space.near(params[:spaces][:address], 20)
+    else
+      @spaces = Space.all
     end
-
-    # @spaces = @spaces.where(guests)
 
     @markers = @spaces.map do |space|
       {
