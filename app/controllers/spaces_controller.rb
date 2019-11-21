@@ -5,6 +5,11 @@ class SpacesController < ApplicationController
 
   def index
     @spaces = Space.geocoded
+    if params[:spaces][:address].present?
+      @spaces = Space.near(params[:spaces][:address], 20)
+    else
+      @spaces = Space.all
+    end
     @markers = @spaces.map do |space|
       {
         lat: space.latitude,
@@ -13,13 +18,7 @@ class SpacesController < ApplicationController
         image_url: helpers.asset_url('monster1.jpg')
       }
     end
-    if params[:spaces][:address].present?
-      @spaces = Space.where("address ILIKE ?", "%#{params[:spaces][:address]}%")
-    else
-      @spaces = Space.all
-    end
   end
-
 
   def show
     @booking = Booking.new
