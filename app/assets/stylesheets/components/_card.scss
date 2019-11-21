@@ -17,14 +17,16 @@
 }
 
 .card-product h2 {
-  font-size: 20px;
+  // font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   margin: 0;
   font-family: "Tomorrow", sans-serif;
 }
 
 .card-product p {
-  font-size: 18px;
+  // font-size: 18px;
+  font-size: 12px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -77,3 +79,6 @@
   font-weight: 800;
 }
 
+.page-heading {
+  font-family: "Tomorrow", sans-serif;
+}
