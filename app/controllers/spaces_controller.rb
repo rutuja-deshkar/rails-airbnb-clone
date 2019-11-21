@@ -10,6 +10,7 @@ class SpacesController < ApplicationController
     else
       @spaces = Space.all
     end
+    
     @markers = @spaces.map do |space|
       {
         lat: space.latitude,

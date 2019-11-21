@@ -58,6 +58,7 @@ space1 = Space.new(
             price_per_day: (30..90).to_a.sample*10,
             # user_id: (1..users_attributes.size).to_a.sample,
             user_id: User.all.sample.id,
+            # address: "Rudi-Dutschke-Straße 26, 10969 Berlin",
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
 # space1.remote_photo_url = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
 space1.save!
@@ -69,6 +70,7 @@ space2 = Space.new(
             price_per_day: (30..90).to_a.sample*10,
             # user_id: User.second.id
             user_id: User.all.sample.id,
+            # address: "Wallstr. 9 GF, 1st Floor, 10179 Berlin",
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
 # space2.remote_photo_url = "http://thespaces.com/wp-content/uploads/2015/04/Gallery_Small-1.jpg"
 space2.save!
@@ -80,6 +82,7 @@ space3 = Space.new(
             price_per_day: (30..90).to_a.sample*10,
             # user_id: (1..users_attributes.size).to_a.sample,
             user_id: User.all.sample.id,
+            # address: "Dresdener Str. 36, 10178 Berlin"
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
 # space3.remote_photo_url = "https://images.unsplash.com/photo-1531973576160-7125cd663d86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
 space3.save!
