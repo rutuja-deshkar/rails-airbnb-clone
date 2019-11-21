@@ -52,6 +52,7 @@
                 <p>Accomodates <strong><%= space.max_capacity %></strong> people</p>
                 <%= link_to "Update", edit_space_path(space), class: "btn btn-success mt-3" %>
                 <%= link_to "Delete", space_path(space), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-success mt-3" %>
+                <%= link_to "View all bookings", space_bookings_path(space), class: "btn btn-success mt-3" %>
               </div>
             </div>
           </div>
