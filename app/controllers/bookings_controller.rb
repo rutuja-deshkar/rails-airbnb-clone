@@ -30,7 +30,7 @@ class BookingsController < ApplicationController
 
   def update
     @booking.update(booking_params)
-    redirect_to bookings_path, notice: 'Booking was successfully updated.'
+    redirect_to profile_path, notice: 'Booking was successfully updated.'
   end
 
   def destroy
@@ -45,6 +45,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:space_id, :start_date, :end_date)
+    params.require(:booking).permit(:space_id, :start_date, :end_date, :number_of_persons, :confirmation)
   end
 end
