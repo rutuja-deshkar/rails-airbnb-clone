@@ -1,8 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
-  font-family: 'Titillium Web', sans-serif;
+  background: black;
+  color: white;
+}
 
+.navbar-nav .nav-link {
+  color: white !important;
+  text-decoration: none;
 }
 
 .navbar-lewagon .navbar-collapse {
