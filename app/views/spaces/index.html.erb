@@ -1,18 +1,17 @@
-<div class="form_container">
-  <h3>Find a space near you</h3>
+<div class="form-results-page">
   <%= simple_form_for :spaces, url: spaces_path, method: "get" do |f| %>
-    <%= f.input :address, as: :string, input_html: {value: params[:spaces][:address]}, label: false, required: true %>
     <%= f.label :guests, 'For how many people?' %>
     <%= f.input :guests, collection: 1..60, selected: params[:spaces][:guests].to_i, label: false %>
-    <%= f.input :start_date, as: :string, input_html: {value: params[:spaces][:start_date], class: "datepicker"} %>
-    <%= f.input :end_date, as: :string, input_html: {value: params[:spaces][:end_date], class: "datepicker"} %>
-    <%= f.button :submit, "Go", class: "button" %>
+    <%= f.input :start_date, as: :string, input_html: {value: params[:spaces][:start_date], class: "datepicker date_field"} %>
+    <%= f.input :end_date, as: :string, input_html: {value: params[:spaces][:end_date], class: "datepicker date_field"} %>
+    <%= f.button :submit, "Go", class: "btn btn-success" %>
   <% end %>
 </div>
 
-<div class="container">
-  <h3 class="text-left mt-3 ml-4">Explore our spaces</h3>
-  <div>
+<div class="results-container" style="position: relative, height:80vh; width:100vw; bottom: 0">
+  <h3 style="font-size: 24px; padding-left: 30px;">Explore our spaces</h3>
+  <div class="spaces-list" style="width: 50vw;
+  height: 80vh; display: inline-block; position:absolute; left: 0">
     <% if @spaces.any? %>
       <% @spaces.each do |space| %>
         <div class="col-xs-12 col-sm-4">
@@ -37,15 +36,12 @@
       <p>Sorry, we couldn't find any space that meets your criteria.</p>
     <% end %>
   </div>
-  <!-- <img id="map" src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png'> -->
-</div>
-
-
-<div
+  <div
   id="map"
-  style="width: 400px;
-  height: 500px;
-  padding-left: 20px;"
+  style="width: 50vw;
+  height: 80vh; display: inline-block; position:absolute; right: 0"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
+</div>
+
