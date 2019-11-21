@@ -33,9 +33,9 @@ class SpacesController < ApplicationController
     @space = Space.new(space_params)
     @space.user = current_user
     if @space.save!
-      redirect_to spaces_path
+      redirect_to spaces_path(spaces: { address: '' })
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -63,5 +63,10 @@ class SpacesController < ApplicationController
 
   def space_params
     params.require(:space).permit(:name, :description, :address, :max_capacity, :price_per_day, :photo)
+  end
+
+  def set_search_query
+    unless params[:spaces].nil?
+    end
   end
 end
