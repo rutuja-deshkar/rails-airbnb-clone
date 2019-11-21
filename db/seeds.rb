@@ -60,7 +60,7 @@ space1 = Space.new(
             user_id: User.all.sample.id,
             # address: "Rudi-Dutschke-Straße 26, 10969 Berlin",
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
-space1.remote_photo_url = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
+# space1.remote_photo_url = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
 space1.save!
 
 space2 = Space.new(
@@ -72,7 +72,7 @@ space2 = Space.new(
             user_id: User.all.sample.id,
             # address: "Wallstr. 9 GF, 1st Floor, 10179 Berlin",
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
-space2.remote_photo_url = "http://thespaces.com/wp-content/uploads/2015/04/Gallery_Small-1.jpg"
+# space2.remote_photo_url = "http://thespaces.com/wp-content/uploads/2015/04/Gallery_Small-1.jpg"
 space2.save!
 
 space3 = Space.new(
@@ -84,7 +84,7 @@ space3 = Space.new(
             user_id: User.all.sample.id,
             # address: "Dresdener Str. 36, 10178 Berlin"
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
-space3.remote_photo_url = "https://images.unsplash.com/photo-1531973576160-7125cd663d86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+# space3.remote_photo_url = "https://images.unsplash.com/photo-1531973576160-7125cd663d86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
 space3.save!
 
 space4 = Space.new(
@@ -95,7 +95,7 @@ space4 = Space.new(
             # user_id: (1..users_attributes.size).to_a.sample,
             user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
-space4.remote_photo_url = "https://images.unsplash.com/photo-1528238646472-f2366160b6c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80"
+# space4.remote_photo_url = "https://images.unsplash.com/photo-1528238646472-f2366160b6c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80"
 space4.save!
 
 space5 = Space.new(
@@ -106,7 +106,7 @@ space5 = Space.new(
             # user_id: (1..users_attributes.size).to_a.sample,
             user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
-space5.remote_photo_url = "https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+# space5.remote_photo_url = "https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
 space5.save!
 
 space6 = Space.new(
@@ -117,7 +117,7 @@ space6 = Space.new(
             # user_id: (1..users_attributes.size).to_a.sample,
             user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London'].sample)
-space6.remote_photo_url = "https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3025&q=80"
+# space6.remote_photo_url = "https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3025&q=80"
 space6.save!
 
 space7 = Space.new(
@@ -128,7 +128,7 @@ space7 = Space.new(
             # user_id: (1..users_attributes.size).to_a.sample,
             user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
-space7.remote_photo_url = "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+# space7.remote_photo_url = "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
 space7.save!
 
 space8 = Space.new(
@@ -139,7 +139,7 @@ space8 = Space.new(
             # user_id: (1..users_attributes.size).to_a.sample,
             user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
-space8.remote_photo_url = "https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+# space8.remote_photo_url = "https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
 space8.save!
 
 space9 = Space.new(
@@ -150,7 +150,7 @@ space9 = Space.new(
             # user_id: (1..users_attributes.size).to_a.sample,
             user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
-space9.remote_photo_url = "https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1661&q=80"
+# space9.remote_photo_url = "https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1661&q=80"
 space9.save!
 
 space10 = Space.new(
@@ -161,7 +161,7 @@ space10 = Space.new(
             # user_id: (1..users_attributes.size).to_a.sample,
             user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
-space10.remote_photo_url = "https://img.theculturetrip.com/x/smart/wp-content/uploads/2017/09/img_6499-min.jpg"
+# space10.remote_photo_url = "https://img.theculturetrip.com/x/smart/wp-content/uploads/2017/09/img_6499-min.jpg"
 space10.save!
 
 puts "Added spaces"

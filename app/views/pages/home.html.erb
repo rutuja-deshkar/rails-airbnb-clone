@@ -8,9 +8,11 @@
 <div class="form_container">
   <h3>Find a space near you</h3>
   <%= simple_form_for :spaces, url: spaces_path, method: "get" do |f| %>
-    <%= f.input_field :address, placeholder: 'Type in your city', required: true %>
+    <%= f.input :address, as: :string, placeholder: 'Type in your city', label: false, required: true %>
     <%= f.label :guests, 'For how many people?' %>
-    <%= f.input_field :guests, collection: 1..60, selected: 1, required: true %>
-    <%= f.button :submit, "Go", class: "btn btn-primary" %>
+    <%= f.input :guests, collection: 1..60, selected: 1, label: false %>
+    <%= f.input :start_date, as: :string, input_html: {class: "datepicker"} %>
+    <%= f.input :end_date, as: :string, input_html: {class: "datepicker"} %>
+    <%= f.button :submit, "Go", class: "button" %>
   <% end %>
 </div>
