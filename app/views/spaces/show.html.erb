@@ -1,5 +1,5 @@
 <div class="card-show">
-  <%= link_to 'Back to all listings', spaces_path, class: "back-link" %>
+  <%= link_to "Browse all spaces", spaces_path(spaces: {address: ''}), class: "btn btn-success" %>
   <%if @space.photo? %>
     <%= cl_image_tag @space.photo, height: 700, width: 500, crop: :fill %>
   <% else %>
