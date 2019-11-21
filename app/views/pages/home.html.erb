@@ -6,22 +6,11 @@
 </div>
 
 <div class="form_container">
-  <h3 class="text-left">Find your place</h3>
-
-      <%= form_with model: @spaces do |form| %>
-      <div class="form-input mb-1">
-       <%= form.text_field :address, placeholder: "Type in location", class: "form-control" %>
-       </div>
-         <div class="form-input mb-1">
-           <%= form.text_field :max_capacity, placeholder: "How many guests", class: "form-control" %>
-         </div>
-           <div class="form-input mb-1">
-             <%= form.date_field :start_date, class: "form-control" %>
-           </div>
-         <div class="form-input mb-1">
-         <%= form.date_field :end_date, class: "form-control" %>
-       </div>
-      <%= link_to "Search", spaces_path, class: "btn btn-success" %>
-    <% end %>
-  </div>
-
+  <h3>Find a space near you</h3>
+  <%= simple_form_for :spaces, url: spaces_path, method: "get" do |f| %>
+    <%= f.input_field :address, placeholder: 'Type in your city', required: true %>
+    <%= f.label :guests, 'For how many people?' %>
+    <%= f.input_field :guests, collection: 1..60, selected: 1, required: true %>
+    <%= f.button :submit, "Go", class: "btn btn-primary" %>
+  <% end %>
+</div>

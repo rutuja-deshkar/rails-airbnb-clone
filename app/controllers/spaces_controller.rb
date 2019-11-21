@@ -4,10 +4,7 @@ class SpacesController < ApplicationController
   skip_before_action :authenticate_user!, only: :show
 
   def index
-    @spaces = Space.all
-
     @spaces = Space.geocoded
-
     @markers = @spaces.map do |space|
       {
         lat: space.latitude,
@@ -15,8 +12,13 @@ class SpacesController < ApplicationController
         infoWindow: render_to_string(partial: "/shared/info_window", locals: { space: space }),
         image_url: helpers.asset_url('monster1.jpg')
       }
+    if params[:spaces][:address].present?
+      @spaces = Space.where("address ILIKE ?", "%#{params[:spaces][:address]}%")
+    else
+      @spaces = Space.all
     end
   end
+
 
   def show
     @booking = Booking.new

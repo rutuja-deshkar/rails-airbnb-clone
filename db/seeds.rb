@@ -59,7 +59,7 @@ space1 = Space.new(
             # user_id: (1..users_attributes.size).to_a.sample,
             user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
-space1.remote_photo_url = "https://global-uploads.webflow.com/58b05372820eae3152b7065a/5cc701170871f77f162d6080_signup.jpg"
+space1.remote_photo_url = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
 space1.save!
 
 space2 = Space.new(
@@ -81,7 +81,7 @@ space3 = Space.new(
             # user_id: (1..users_attributes.size).to_a.sample,
             user_id: User.all.sample.id,
             address: ['Berlin', 'Paris', 'London', 'Budapest'].sample)
-space3.remote_photo_url = "https://res.cloudinary.com/wagon/image/upload/c_fill,q_auto,w_1440/v1542723646/lbxd30bqefwakucqo8ts.webp"
+space3.remote_photo_url = "https://images.unsplash.com/photo-1531973576160-7125cd663d86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
 space3.save!
 
 space4 = Space.new(
