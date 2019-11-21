@@ -48,7 +48,7 @@
               <div class="card-product-infos">
                 <p><strong><%= space.name %></strong></p>
                 <p><%= space.address %></p>
-                <p><%= space.price_per_person %>€</p>
+                <p><%= space.price_per_day %>€</p>
                 <p>Accomodates <%= space.max_capacity %> people</p>
                 <%= link_to "Update", edit_space_path(space), class: "btn btn-success mt-3" %>
                 <%= link_to "Delete", space_path(space), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-success mt-3" %>
