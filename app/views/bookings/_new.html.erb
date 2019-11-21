@@ -1,7 +1,7 @@
 <div class="form-login text-dark mt-3 mb-3 ml-0">
-        <%= simple_form_for [space, booking] do |f| %>
-          <%= f.input :start_date %>
-          <%= f.input :end_date %>
-          <%= f.submit "Submit", class: "btn-submit" %>
-        <% end %>
+  <%= simple_form_for [space, booking] do |f| %>
+    <%= f.input :start_date, as: :string, input_html: {class: "datepicker"} %>
+    <%= f.input :end_date, as: :string, input_html: {class: "datepicker"} %>
+    <%= f.submit "Book this space", class: "btn-submit bg-success" %>
+  <% end %>
 </div>
