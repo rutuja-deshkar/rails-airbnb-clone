@@ -12,6 +12,7 @@ class SpacesController < ApplicationController
         infoWindow: render_to_string(partial: "/shared/info_window", locals: { space: space }),
         image_url: helpers.asset_url('monster1.jpg')
       }
+    end
     if params[:spaces][:address].present?
       @spaces = Space.where("address ILIKE ?", "%#{params[:spaces][:address]}%")
     else
