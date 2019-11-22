@@ -3,7 +3,7 @@ class Space < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   validates :name, presence: true
   validates :description, presence: true, length: { minimum: 3 }
   validates :max_capacity, presence: true, numericality: { only_integer: true }

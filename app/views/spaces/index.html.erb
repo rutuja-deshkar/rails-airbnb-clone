@@ -1,11 +1,14 @@
 <div class="form-results-page">
   <%= simple_form_for :spaces, url: spaces_path, method: "get" do |f| %>
     <%= f.label :address, 'City' %>
-    <%= f.input :address, as: :string, input_html: {value: params[:spaces][:address]}, label: false %>
-    <%= f.label :guests, 'Number of people:' %>
-    <%= f.input :guests, collection: 1..60, selected: params[:spaces][:guests].to_i, label: false %>
-    <%= f.input :start_date, as: :string, input_html: {value: params[:spaces][:start_date], class: "datepicker date_field"} %>
-    <%= f.input :end_date, as: :string, input_html: {value: params[:spaces][:end_date], class: "datepicker date_field"} %>
+    <%# if  params[:spaces][:address].present? %>
+      <%= f.input :address, as: :string, input_html: {value: params[:spaces][:address]}, label: false  %>
+
+      <%= f.label :guests, 'Number of people:' %>
+      <%= f.input :guests, collection: 1..60, selected: params[:spaces][:guests].to_i, label: false %>
+      <%= f.input :start_date, as: :string, input_html: {value: params[:spaces][:start_date], class: "datepicker date_field"} %>
+      <%= f.input :end_date, as: :string, input_html: {value: params[:spaces][:end_date], class: "datepicker date_field"} %>
+    <%# end %>
     <%= f.button :submit, "Go", class: "btn btn-success" %>
   <% end %>
 </div>
@@ -18,7 +21,7 @@
         <div class="col-xs-12 col-sm-4">
           <div class="mx-3 my-3" >
             <div class="card-product relative">
-              <%= link_to "", space_path(space), class:"link" %>
+              <%= link_to "", space_path(space, request.query_parameters), class:"link" %>
               <%if space.photo? %>
                 <%= cl_image_tag space.photo %>
               <% else %>
