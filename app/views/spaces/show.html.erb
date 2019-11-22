@@ -8,6 +8,7 @@
   <h2 class="name"><%= @space.name %></h2>
   <h3 class="location"><%= @space.address %></h3>
   <p class="name"><%= @space.description %></p>
+  <p><%= @space.price_per_day %>€</p>
   <!-- <div class="col-sm-12 col-md-6"> -->
   <div class="booking-form">
     <%= render "bookings/new", space: @space, booking: @booking %>
