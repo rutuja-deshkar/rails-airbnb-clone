@@ -1,41 +1,37 @@
 .card-product {
   overflow: hidden;
-  height: 200px;
-  width: 40vw;
-  background: white;
-  // box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  min-height: 200px;
+  width: 45vw;
   display: flex;
   align-items: center;
-  color: black;
+  color: white;
+  border-bottom: 1px solid #00FF97;
 }
 
 .card-product img {
   height: 200px;
-  // width: 120px;
   width: 300px;
   object-fit: cover;
+  padding-bottom: 15px;
 }
 
 .card-product h2 {
   // font-size: 20px;
-  font-size: 15px;
-  font-weight: bold;
-  margin: 0;
-  font-family: "Tomorrow", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  margin-bottom: 18px;
 }
 
 .card-product p {
   // font-size: 18px;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.4;
-  opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
-  font-family: "Tomorrow", sans-serif;
 }
 
 .card-product .card-product-infos {
-  padding: 30px;
+  padding: 40px;
 }
 
 .card-container {
@@ -75,10 +71,13 @@
   z-index: 1;
 }
 
-#profile-card-name {
-  font-weight: 800;
+.card-product .profile-card-name {
+  font-weight: 600;
+  font-size: 21px;
 }
 
-.page-heading {
-  font-family: "Tomorrow", sans-serif;
+.link_profile_bookings {
+  margin: 12px 0 15px 0;
+  color: #00FF97;
+  display: block;
 }
