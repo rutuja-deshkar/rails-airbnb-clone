@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :spaces do
     resources :bookings, only: [:new, :create, :index]
+    # patch :update_max_availability, on: :member
   end
   resources :bookings, only: [:show, :edit, :update, :destroy]
   get '/profile',  to: 'profiles#index'

@@ -18,7 +18,12 @@
                 <p>From: <%= booking.start_date %></p>
                 <p>To: <%= booking.end_date %></p>
                 <p>Booked for <strong><%= booking.number_of_persons %></strong> people </p>
-                <%= link_to "Update", edit_booking_path(booking), class: "btn btn-success mt-3" %>
+                <% if booking.confirmation == true %>
+                  <p>Status: Confirmed</p>
+                <% else %>
+                  <p>Status: Pending</p>
+                <% end %>
+                <%#= link_to "Update", edit_booking_path(booking), class: "btn btn-success mt-3" %>
                 <%= link_to "Delete", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-success mt-3" %>
               </div>
             </div>
