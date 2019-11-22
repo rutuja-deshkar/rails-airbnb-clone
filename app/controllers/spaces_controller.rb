@@ -44,7 +44,8 @@ class SpacesController < ApplicationController
     @space = Space.new(space_params)
     @space.user = current_user
     if @space.save!
-      redirect_to spaces_path(spaces: { address: '' })
+      # redirect_to spaces_path(spaces: { address: '' })
+      redirect_to profile_path, notice: 'Space created successfully!'
     else
       render :new
     end
