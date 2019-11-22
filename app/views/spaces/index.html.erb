@@ -3,11 +3,12 @@
     <%= f.label :address, 'City' %>
     <%# if  params[:spaces][:address].present? %>
       <%= f.input :address, as: :string, input_html: {value: params[:spaces][:address]}, label: false  %>
-
       <%= f.label :guests, 'Number of people:' %>
       <%= f.input :guests, collection: 1..60, selected: params[:spaces][:guests].to_i, label: false %>
-      <%= f.input :start_date, as: :string, input_html: {value: params[:spaces][:start_date], class: "datepicker date_field"} %>
-      <%= f.input :end_date, as: :string, input_html: {value: params[:spaces][:end_date], class: "datepicker date_field"} %>
+      <%= f.label :start_date, 'From:' %>
+      <%= f.input :start_date, as: :string, label: false, input_html: {value: params[:spaces][:start_date], class: "datepicker date_field"} %>
+      <%= f.label :start_date, 'To:' %>
+      <%= f.input :end_date, as: :string, label: false, input_html: {value: params[:spaces][:end_date], class: "datepicker date_field"} %>
     <%# end %>
     <%= f.button :submit, "Go", class: "btn btn-success" %>
   <% end %>
