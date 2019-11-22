@@ -4,10 +4,11 @@
 }
 
 .form-results-page .date_field {
-  width: 100px;
+  width: 150px;
   display: inline-block;
   padding: 0 10px;
   margin-left: 15px;
+  border-right: none;
 }
 
 .form-results-page .form-group {
@@ -16,5 +17,10 @@
 }
 
 .form-results-page .form-group .button {
-    width: 109px;
+  width: 109px;
+}
+
+
+.form-results-page, .form-control {
+  border-right: none;
 }

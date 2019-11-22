@@ -23,6 +23,7 @@
                 <% else %>
                   <p style='margin-bottom: 14px;'>Status: Pending</p>
                 <% end %>
+                <br>
                 <%#= link_to "Update", edit_booking_path(booking), class: "btn btn-success mt-3" %>
                 <%= link_to "Delete", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn-sm btn-success mt-3" %>
               </div>

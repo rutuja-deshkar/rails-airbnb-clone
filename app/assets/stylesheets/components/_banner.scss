@@ -1,9 +1,10 @@
 .banner {
   position: absolute;
   background-size: cover;
-  height: 550px;
+  min-height: 600px;
   width: 100%;
   z-index: -3;
+  overflow: hidden;
 }
 
 #hp_image {

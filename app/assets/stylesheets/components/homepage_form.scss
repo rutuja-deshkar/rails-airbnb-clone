@@ -4,6 +4,9 @@
 
 .form_container h3 {
   text-align: center;
+  margin-bottom: 21px;
+  font-weight: 300;
+  color: #00FF97;
 }
 
 
@@ -11,3 +14,29 @@
   width: 100%;
 }
 
+.form-control, .form-control:disabled, .form-control[readonly], .form-control .select .required, .form-control:focus {
+  background-color: black;
+  border: none;
+  outline: none;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #00FF97;
+  border-right: 1px solid #00FF97;
+  color: white;
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  opacity: 1;
+  color: white;
+}
+
+input, input::placeholder {
+  background-image: none;
+  opacity: 1;
+}
+
+label {
+  color: #00FF97;
+  font-size: 16px;
+  font-weight: 300;
+}
