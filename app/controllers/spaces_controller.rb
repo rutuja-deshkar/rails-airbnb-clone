@@ -27,7 +27,7 @@ class SpacesController < ApplicationController
         lat: space.latitude,
         lng: space.longitude,
         infoWindow: render_to_string(partial: "/shared/info_window", locals: { space: space }),
-        image_url: helpers.asset_url('monster1.jpg')
+        image_url: helpers.asset_url('map_pin.png')
       }
     end
   end

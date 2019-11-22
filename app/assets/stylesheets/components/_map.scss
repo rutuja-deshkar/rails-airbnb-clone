@@ -12,3 +12,12 @@ map {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
+
+.mapboxgl-canvas {
+  padding-top: 12px;
+}
+
+.mapboxgl-ctrl-geocoder {
+  display: none;
+}
+
