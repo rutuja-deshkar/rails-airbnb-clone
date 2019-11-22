@@ -1,4 +1,7 @@
 <div class="container">
+  <div class="mt-1 d-flex justify-content-end align-items-center">
+    <%= link_to "Browse all spaces", spaces_path(spaces: {address: ''}), class: "btn btn-success" %>
+  </div>
   <% if @bookings.any? %>
     <h3 class="text-left mt-3 mb-2 ml-4">My bookings</h3>
     <div>
