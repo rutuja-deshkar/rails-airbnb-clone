@@ -10,7 +10,7 @@ map {
 
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+
 }
 
 .mapboxgl-canvas {
@@ -21,3 +21,14 @@ map {
   display: none;
 }
 
+.info_color h2 {
+  color: black;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.info_color p {
+  color: black;
+  font-size: 15px;
+  line-height: 1.4;
+}
