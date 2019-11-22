@@ -55,7 +55,8 @@ class SpacesController < ApplicationController
 
   def update
     if @space.update(space_params)
-      redirect_to @space, notice: 'Space was successfully updated.'
+      # redirect_to @space, notice: 'Space was successfully updated.'
+      redirect_to profile_path, notice: 'Space was successfully updated.'
     else
       render :edit
     end
@@ -63,7 +64,8 @@ class SpacesController < ApplicationController
 
   def destroy
     @space.destroy
-    redirect_to spaces_path, notice: 'Space was successfully deleted.'
+    # redirect_to spaces_path, notice: 'Space was successfully deleted.'
+    redirect_to profile_path, notice: 'Space was successfully updated.'
   end
 
   private
@@ -93,13 +95,13 @@ class SpacesController < ApplicationController
   #   unless params[:spaces].nil?
 
   #     unless params[:spaces][:start_date].nil?
-  #       unless params[:spaces][:start_date].empty?
-  #         begin
-  #           start_date = Date.parse(params[:spaces][:start_date])
-  #           end_date = Date.parse(params[:spaces][:end_date])
-  #         rescue ArgumentError
+  #       # unless params[:spaces][:start_date].empty?
+  #       #   begin
+  #       #     start_date = Date.parse(params[:spaces][:start_date])
+  #       #     end_date = Date.parse(params[:spaces][:end_date])
+  #       #   rescue ArgumentError
 
-  #         end
+  #       #   end
 
   #         if (start_date.is_a?(Date) && end_date.is_a?(Date))
   #           @date_selected_spaces = Space.joins(:bookings).where.not('start_date > ? AND end_date < ?', start_date, end_date)

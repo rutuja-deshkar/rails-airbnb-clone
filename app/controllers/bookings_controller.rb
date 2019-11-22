@@ -21,7 +21,7 @@ class BookingsController < ApplicationController
     if @booking.save!
       redirect_to profile_path, notice: 'Booking successful!'
     else
-      render 'new'
+      render :new
     end
   end
 
