@@ -3,8 +3,7 @@
   background-size: cover;
   height: 550px;
   width: 100%;
-  z-index: 3;
-
+  z-index: -3;
 }
 
 #hp_image {
@@ -12,11 +11,13 @@
   width: 700px;
 }
 
-.container_word {
+.container_chaos {
+  transform: rotate(27deg) translate(130px, 250px);
 }
 
-.container_chaos {
+.container_space {
   margin-left: 180px;
+  transform: rotate(-30deg) translate(50px, -50px);
 }
 
 .banner h1 {
@@ -24,8 +25,6 @@
   color: white;
   font-size: 170px;
   font-weight: 500;
-  transform: rotate(-15deg);
-
 }
 
 .form_container {
